@@ -8,3 +8,4 @@ We are going to use HTML, CSS and most importantly JavaScript!
 
 Setup...
 
+[commit]
