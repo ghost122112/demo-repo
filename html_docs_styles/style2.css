@@ -1,0 +1,23 @@
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --red: rgb(230, 21, 21);
+}
+.body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
+}
+.main > .wrapper {
+    padding: 0 calc(50% - 800px);
+    font-size: 30px;
+    line-height: 35px;
+}
+@media screen and (max-width: 1200px) {
+    .main > .wrapper {
+        padding: 0 calc(50% - 500px);
+        font-size: 25px;
+        line-height: 30px;
+    }
+}
