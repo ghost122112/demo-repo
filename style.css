@@ -1,0 +1,142 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --another-black: rgb(36, 36, 36);
+    --green: rgb(22, 167, 22);
+    --red: rgb(219, 11, 11);
+}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.body {
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    background: var(--black);
+    color: var(--white);
+    animation: animation1 0.5s linear;
+}
+@keyframes animation1 {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.header {
+    background-color: var(--white);
+    min-height: 50px;
+    width: 100%;
+    display: flex;
+    color: var(--black);
+    border-bottom: 2px solid var(--red);
+}
+.header > h1 {
+    font-size: 40px;
+    line-height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.header > h1:hover {
+    background: var(--black);
+    color: var(--white);
+    border: 1px solid var(--red);
+    transition: 0.15s linear;
+}
+@media screen and (max-width: 1200px) {
+    .header > h1 {
+        font-size: 34px;
+        line-height: 36px;
+    }
+    @media screen and (max-width: 800px) {
+        .header > h1 {
+            font-size: 26px;
+            line-height: 28px;
+        }
+        @media screen and (max-width: 600px) {
+            .header > h1 {
+                font-size: 20px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+.wrapper {
+    display: flex;
+    flex-flow: column;
+}
+.wrapper > main {
+    font-size: 15px;
+    display: grid;
+    grid: 'block-1 block-2 block-3';
+    height: 700px;
+}
+.wrapper > main > div.left__block {
+    grid-area: block-1;
+    padding: 0 calc(50% - 150px);
+    overflow: scroll;
+}
+.wrapper > main > div.main__block {
+    grid-area: block-2;
+    padding: 0 calc(50% - 440px);
+    border-left: 1px solid var(--white);
+    border-right: 1px solid var(--white);
+}
+.wrapper > main > div.right__block {
+    grid-area: block-3;
+    padding: 0 calc(50% - 150px);
+    overflow: scroll;
+}
+.wrapper > main > div.left__block > article {
+    margin-top: 20px;
+    display: grid;
+    grid: 'block-1'
+          'block-2'
+          'block-3';
+}
+.wrapper > main > div.right__block > article {
+    margin-top: 20px;
+    display: grid;
+    grid: 'block-1'
+          'block-2'
+          'block-3';
+}
+.wrapper > main > div.left__block > article > div.left__block--articles--block-1 {grid-area: block-1;}
+.wrapper > main > div.left__block > article > div.left__block--articles--block-1 {grid-area: block-2;}
+.wrapper > main > div.left__block > article > div.left__block--articles--block-1 {grid-area: block-3;}
+.wrapper > main > div.main__block > article {
+    margin: 10px;
+    display: grid;
+    grid: 'block-1 block-2 block-3'
+          'block-4 block-5 block-6'
+          'block-7 block-8 block-9';
+}
+.wrapper > main > div.main__block > article > div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 1px 20px;
+}
+.wrapper > main > div.main__block > article > div.main__block--articles--blocks-1 {grid-area: block-1;}
+.wrapper > main > div.main__block > article > div.main__block--articles--blocks-1 {grid-area: block-2;}
+.wrapper > main > div.main__block > article > div.main__block--articles--blocks-1 {grid-area: block-3;}
+.wrapper > main > div.main__block > article > div.main__block--articles--blocks-1 {grid-area: block-4;}
+.wrapper > main > div.main__block > article > div.main__block--articles--blocks-1 {grid-area: block-5;}
+.wrapper > main > div.main__block > article > div.main__block--articles--blocks-1 {grid-area: block-6;}
+.wrapper > main > div.main__block > article > div.main__block--articles--blocks-1 {grid-area: block-7;}
+.wrapper > main > div.main__block > article > div.main__block--articles--blocks-1 {grid-area: block-8;}
+.wrapper > main > div.main__block > article > div.main__block--articles--blocks-1 {grid-area: block-9;}
+
+.wrapper > main > div > article > div:hover {
+    background: var(--white);
+    color: var(--black);
+    transition: 0.3s linear;
+}
+.footer {
+    display: flex;
+    background-color: var(--another-black);
+    min-height: 200px;
+    list-style-type: none;
+}
